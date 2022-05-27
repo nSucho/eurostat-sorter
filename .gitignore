@@ -1,4 +1,8 @@
 data/sorted
+data/zip_files
 data/nrg_cb_pem.tsv
 data/nrg_ind_pehnf.tsv
-data/zip_files
+data/nrg_cb_em
+data/nrg_cb_e
+data/nrg_ind_peh
+data/nrg_ind_pehap

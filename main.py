@@ -24,14 +24,14 @@ def read_in_data():
     # 3 = (nrg_cb_em)
     # 4 = (nrg_cb_e)
     # 5 = (nrg_ind_peh)
-    # 6 = (nrg_ind_pehnf) # TODO: hat er doppelt
+    # 6 = (nrg_ind_pehnf) # TODO: doppelt
     # 7 = (nrg_ind_pehap)
-    type_of_data = '2'
+    type_of_data = '1'
 
     # define output of 'SIEC'
     # True = only show the short code (e.g. 'CF')
     # False = show the whole label (e.g. 'Combustible fuels')
-    siec_as_code = False
+    siec_as_code = True
 
     if type_of_data == '1':
         nrg_cb_pem.nrg_cb_pem_main(siec_as_code)

@@ -45,15 +45,27 @@ def siec_to_label(dataframe):
     :return:
     :rtype:
     """
+    # TODO: can happen that code is not in list, just add here if missing
     # dict
-    replace_dict = {'TOTAL': 'Total', 'CF': 'Combustible fuels', 'CF_R': 'Combustible fuels- renewable',
-                    'CF_NR': 'Combustible fuels- non-renewable', 'C0000': 'Coal and manufactured gases',
-                    'G3000': 'Natural gas', 'O4000XBIO': 'Oil and petroleum products(excluding biofuel portion)',
+    # read in the file
+    tsv_data = pd.read_csv('data/nrg_ind_pehap.tsv', sep='\t')
+    """
+    replace_dict = {'TOTAL': 'Total',
+                    'CF': 'Combustible fuels', 'CF_R': 'Combustible fuels- renewable',
+                    'CF_NR': 'Combustible fuels- non-renewable',
+                    'C0000': 'Coal and manufactured gases',
+                    'G3000': 'Natural gas',
+                    'O4000XBIO': 'Oil and petroleum products(excluding biofuel portion)',
                     'RA100': 'Hydro', 'RA110': 'Pure hydro power', 'RA120': 'Mixed hydro power',
                     'RA130': 'Pumped hydro power', 'RA200': 'Geothermal', 'RA300': 'Wind', 'RA310': 'Wind on shore',
                     'RA320': 'Wind off shore', 'RA400': 'Solar', 'RA410': 'Solar thermal',
                     'RA420': 'Solar photovoltaic', 'RA500_5160': 'Other renewable energies',
-                    'N9000': 'Nuclear fuels and other fuels n.e.c.', 'X9900': 'Other fuels n.e.c.'}
+                    'RA500': 'Tide, wave, ocean', 'RA600': 'Ambient heat (heat pumps)',
+                    'N9000': 'Nuclear fuels and other fuels n.e.c.',
+                    'X9900': 'Other fuels n.e.c.',
+                    'E7000': 'Electricity',
+                    'H8000': 'Heat'}
+    """
     # replace the key with the value
     for key, value in replace_dict.items():
         dataframe['SIEC'] = dataframe['SIEC'].replace(key, value, regex=True)

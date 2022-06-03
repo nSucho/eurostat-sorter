@@ -32,7 +32,6 @@ def read_in_data():
     # True = only show the short code (e.g. 'CF')
     # False = show the whole label (e.g. 'Combustible fuels')
     siec_as_code = True
-
     if type_of_data == '1':
         nrg_cb_pem.nrg_cb_pem_main(siec_as_code)
     elif type_of_data == '2':

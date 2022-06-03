@@ -13,13 +13,13 @@ def sort_col(dataframe, column_list, needs_split):
     needs_split = True: split the first column into its individual parts and then move them to the front of the dataframe
     needs_split = false: just sort in order of 'column_list'
     : sort the df in the order of 'column_list'
-    :param dataframe:
+    :param dataframe: the dataframe which gets altered
     :type dataframe: dataframe
-    :param column_list:
+    :param column_list: the list with the future column-names
     :type column_list: list
-    :param needs_split:
+    :param needs_split: if True the first column gets split
     :type needs_split: boolean
-    :return:
+    :return: the altered dataframe
     :rtype: dataframe
     """
     i = 0
@@ -39,11 +39,11 @@ def sort_col(dataframe, column_list, needs_split):
 
 def siec_to_label(dataframe):
     """
-
-    :param dataframe:
-    :type dataframe:
-    :return:
-    :rtype:
+    converts SIEC code to the whole label
+    :param dataframe: The dataframe which needs to altered
+    :type dataframe: dataframe
+    :return: the dataframe with changed SIEC-values
+    :rtype: dataframe
     """
     # TODO: can happen that code is not in list, just add here if missing
     # dict
@@ -61,12 +61,12 @@ def siec_to_label(dataframe):
 
 def save_data(dataframe, file_name, header):
     """
-    method to save the files
-    :param dataframe:
+    saves the files
+    :param dataframe: the dataframe to save
     :type dataframe: dataframe
-    :param file_name:
+    :param file_name: the name which the file should get
     :type file_name: string
-    :param header:
+    :param header: the header which the csv should get
     :type header: list
     :return:
     :rtype:

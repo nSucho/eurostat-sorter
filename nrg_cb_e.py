@@ -10,9 +10,9 @@ import numpy as np
 
 def nrg_cb_e_main(siec):
     """
-
-    :param siec:
-    :type siec:
+    Converts the data of Supply, transformation and consumption of electricity (nrg_cb_e)
+    :param siec: if SIEC is displayed as code(True) or label(False)
+    :type siec: bool
     :return:
     :rtype:
     """

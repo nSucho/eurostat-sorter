@@ -10,9 +10,9 @@ import numpy as np
 
 def nrg_cb_pem_main(siec):
     """
-
-    :param siec:
-    :type siec: boolean
+    Net electricity generation by type of fuel - monthly data (nrg_cb_pem)
+    :param siec: if SIEC is displayed as code(True) or label(False)
+    :type siec: bool
     :return:
     :rtype:
     """

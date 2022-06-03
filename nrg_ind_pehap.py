@@ -10,9 +10,9 @@ import numpy as np
 
 def nrg_ind_pehab_main(siec):
     """
-
-    :param siec:
-    :type siec:
+    Production of electricity and heat by autoproducers, by type of plant (nrg_ind_pehap)
+    :param siec: if SIEC is displayed as code(True) or label(False)
+    :type siec: bool
     :return:
     :rtype:
     """

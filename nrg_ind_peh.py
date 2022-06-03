@@ -7,12 +7,11 @@ import aux_methods
 import pandas as pd
 import numpy as np
 
-# TODO: scheint code abzukappen
 def nrg_ind_peh_main(siec):
     """
-
-    :param siec:
-    :type siec:
+    Gross and net production of electricity and derived heat by type of plant and operator (nrg_ind_peh)
+    :param siec: if SIEC is displayed as code(True) or label(False)
+    :type siec: bool
     :return:
     :rtype:
     """

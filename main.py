@@ -13,7 +13,7 @@ import nrg_ind_pehap
 
 def read_in_data():
     """
-
+    choose which file should be converted and how 'SIEC' should be displayed
     :return:
     """
     # TODO: insert the other data
@@ -21,17 +21,18 @@ def read_in_data():
     # 1 = Net electricity generation by type of fuel - monthly data (nrg_cb_pem)
     # 2 = Gross production of electricity and derived heat from non-combustible fuels by type of plant and operator
     #     (nrg_ind_pehnf)
-    # 3 = (nrg_cb_em)
-    # 4 = (nrg_cb_e)
-    # 5 = (nrg_ind_peh)
+    # 3 = Supply, transformation and consumption of electricity - monthly data (nrg_cb_em)
+    # 4 = Supply, transformation and consumption of electricity (nrg_cb_e)
+    # 5 = Gross and net production of electricity and derived heat by type of plant and operator (nrg_ind_peh)
     # 6 = (nrg_ind_pehnf) # TODO: doppelt
-    # 7 = (nrg_ind_pehap)
-    type_of_data = '1'
+    # 7 = Production of electricity and heat by autoproducers, by type of plant (nrg_ind_pehap)
+    type_of_data = '5'
 
     # define output of 'SIEC'
     # True = only show the short code (e.g. 'CF')
     # False = show the whole label (e.g. 'Combustible fuels')
     siec_as_code = False
+
     if type_of_data == '1':
         nrg_cb_pem.nrg_cb_pem_main(siec_as_code)
     elif type_of_data == '2':
